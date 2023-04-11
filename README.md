@@ -9,13 +9,13 @@ This is an advanced REST API built with Python and FastAPI, integrating with Mon
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>
+git clone https://github.com/BaseMax/FastAPIBooks
 ```
 
 Change into the project directory:
 
 ```bash
-cd <your-repo-name>
+cd FastAPIBooks
 ```
 Create and activate a virtual environment:
 
