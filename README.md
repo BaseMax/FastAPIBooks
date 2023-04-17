@@ -50,6 +50,17 @@ uvicorn main:app --reload
 
 The application will start and be available at http://localhost:8000.
 
+## Routes
+
+| HTTP Method | Endpoint              | Description          |
+|-------------|----------------------|----------------------|
+| GET         | /books               | Get all books         |
+| GET         | /books/{book_id}      | Get a specific book   |
+| POST        | /books               | Add a new book        |
+| PUT         | /books/{book_id}      | Update a book         |
+| DELETE      | /books/{book_id}      | Delete a book         |
+
+
 ## API Endpoints
 
 Retrieve a list of books:
