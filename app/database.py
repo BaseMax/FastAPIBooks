@@ -8,8 +8,9 @@ client = MongoClient(os.getenv("MONGO_URI"))
 
 def get_db():
     
-    db = client.get_database()
+    db = client["bookapi"]
     try:
         yield db
     finally:
         pass
+
