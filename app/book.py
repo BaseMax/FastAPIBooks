@@ -51,6 +51,31 @@ class Book:
         }
     
     
+    def update_book(self, book_id: str , book):
+        data = {}
+        if book["title"]:
+            data["title"] = book["title"]
+        if book["description"]:
+            data["description"] = book["description"]
+        if book["author"]:
+            data["author"] = book["author"]
+        if book["published_year"]:
+            data["published_year"] = book["published_year"]
+        if book["publisher"]:
+            data["publisher"] = book["publisher"]
+        
+        try:
+            result = self.db.books.update_one({"_id": book_id}, {"$set": data})
+        except Exception as e:
+            return self.error_insert()
+        
+        if result.modified_count > 0:
+            return {
+                "detail": "book info updated successfuly."
+            }
+        return self.not_found()
+    
+    
     def not_found(self):
         return JSONResponse({
             "detail": "book not found."
@@ -59,7 +84,7 @@ class Book:
     
     def error_insert(self):
         return JSONResponse({
-            "detail": "error in insert"
+            "detail": "error in insert and update"
         }, 409)
         
 
@@ -67,3 +92,6 @@ class Book:
         return JSONResponse({
             "detail": "Missing required keys in request data"
         }, 422)
+    
+    
+    

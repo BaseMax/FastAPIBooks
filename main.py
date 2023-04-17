@@ -38,11 +38,13 @@ async def add_a_new_book(book = Body(), db = Depends(get_db)):
 
 
 @app.put("/books/{book_id}")
-async def edit_book_by_id():
+async def edit_book_by_id(book_id: str,book = Body() , db = Depends(get_db)):
     """
         Edit a book
     """
-    pass
+    book_instance = Book(db)
+    return book_instance.update_book(book_id, book)
+    
 
 
 @app.delete("/books/{book_id}")
@@ -51,3 +53,5 @@ async def delete_a_book():
         Delete a book by id
     """
     pass
+
+
