@@ -4,6 +4,16 @@
 
 This is an advanced REST API built with Python and FastAPI, integrating with MongoDB for CRUD operations (Create, Read, Update, Delete) on books. FastAPI is a powerful web framework for building APIs, while MongoDB is a NoSQL database that provides flexibility and scalability.
 
+## Routes
+
+| HTTP Method | Endpoint              | Description          |
+|-------------|----------------------|----------------------|
+| GET         | /books               | Get all books         |
+| GET         | /books/{book_id}      | Get a specific book   |
+| POST        | /books               | Add a new book        |
+| PUT         | /books/{book_id}      | Update a book         |
+| DELETE      | /books/{book_id}      | Delete a book         |
+
 ## Installation
 
 Clone this repository to your local machine:
@@ -49,17 +59,6 @@ uvicorn main:app --reload
 ```
 
 The application will start and be available at http://localhost:8000.
-
-## Routes
-
-| HTTP Method | Endpoint              | Description          |
-|-------------|----------------------|----------------------|
-| GET         | /books               | Get all books         |
-| GET         | /books/{book_id}      | Get a specific book   |
-| POST        | /books               | Add a new book        |
-| PUT         | /books/{book_id}      | Update a book         |
-| DELETE      | /books/{book_id}      | Delete a book         |
-
 
 ## API Endpoints
 
