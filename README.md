@@ -115,4 +115,9 @@ curl -X PUT http://localhost:8000/books/1
      -d '{"title": "The Fellowship of the Ring", "author": "J.R.R. Tolkien", "published_year": 1954, "publisher": "George Allen & Unwin", "description": "
 ```
 
+## Authors
+
+- Ali Ahmadi
+- Max Base
+
 Copyright 2023, Max Base
