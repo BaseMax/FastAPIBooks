@@ -65,7 +65,7 @@ class Book:
             data["publisher"] = book["publisher"]
         
         try:
-            result = self.db.books.update_one({"_id": book_id}, {"$set": data})
+            result = self.db.books.update_one({"_id": ObjectId(book_id)}, {"$set": data})
         except Exception as e:
             return self.error_insert()
         
@@ -74,6 +74,18 @@ class Book:
                 "detail": "book info updated successfuly."
             }
         return self.not_found()
+    
+    
+    def delete_book(self, book_id: str):
+        result = self.db.books.delete_one({"_id": ObjectId(book_id)})
+        
+        if result.deleted_count != 0:
+            return {
+                "detail": "Book deleted successfully"
+            }
+        
+        return self.not_found()
+
     
     
     def not_found(self):
