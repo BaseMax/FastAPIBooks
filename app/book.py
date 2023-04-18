@@ -38,7 +38,7 @@ class Book:
     
     
     def add_new_book(self, book):
-        if not all(key in self.fields for key in book.keys()):
+        if not all(key in book for key in self.fields):
             return self.unproessable()
         
         response = None
@@ -53,15 +53,15 @@ class Book:
     
     def update_book(self, book_id: str , book):
         data = {}
-        if book["title"]:
+        if "title" in book:
             data["title"] = book["title"]
-        if book["description"]:
+        if "description" in book:
             data["description"] = book["description"]
-        if book["author"]:
+        if "author" in book:
             data["author"] = book["author"]
-        if book["published_year"]:
+        if "published_year" in book:
             data["published_year"] = book["published_year"]
-        if book["publisher"]:
+        if "publisher" in book:
             data["publisher"] = book["publisher"]
         
         try:
