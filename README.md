@@ -123,6 +123,17 @@ curl -X PUT http://localhost:8000/books/1
      -d '{"title": "The Fellowship of the Ring", "author": "J.R.R. Tolkien", "published_year": 1954, "publisher": "George Allen & Unwin", "description": "
 ```
 
+## Tests
+you can run unit tests by the following command:
+
+```console
+pytest test_bookAPI.py
+```
+And result look like this:
+
+![Screenshot from 2023-04-18 07-01-27](https://user-images.githubusercontent.com/107758775/232664599-36766e55-a93b-4826-bd15-62cfbaa2eeb4.png)
+
+
 ## Authors
 
 - Ali Ahmadi
