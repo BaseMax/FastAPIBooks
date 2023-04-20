@@ -120,7 +120,7 @@ Updates an existing book with the given `book_id`. The request body should inclu
 ```console
 curl -X PUT http://localhost:8000/books/1
      -H "Accept: application/json"
-     -d '{"title": "The Fellowship of the Ring", "author": "J.R.R. Tolkien", "published_year": 1954, "publisher": "George Allen & Unwin", "description": "
+     -d '{"title": "The Fellowship of the Ring", "author": "J.R.R. Tolkien", "published_year": 1954, "publisher": "George Allen & Unwin", "description": "Epic quest to destroy powerful Ring, facing dark forces."}'
 ```
 
 ## Tests
