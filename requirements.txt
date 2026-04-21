@@ -23,7 +23,7 @@ pydantic==1.10.13
 pymongo==4.6.3
 pytest==9.0.3
 python-dateutil==2.8.2
-python-dotenv==1.0.0
+python-dotenv==1.2.2
 python-multipart==0.0.26
 PyYAML==6.0
 requests==2.33.0
